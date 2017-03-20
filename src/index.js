@@ -15,8 +15,7 @@ exports.handler = function(event, context, callback) {
   alexa.registerHandlers(newSessionHandlers,
     selectSideModeHandlers,
     roundOneModeHandlers,
-    roundTwoFirstStrikeModeHandlers,
-    roundTwoPassiveModeHandlers);
+    roundTwoModeHandlers);
 
   alexa.execute();
 };
@@ -117,9 +116,9 @@ var roundOneModeHandlers = Alexa.CreateStateHandler(states.ROUNDONE, {
   }
 });
 
-var roundTwoFirstStrikeModeHandlers = Alexa.CreateStateHandler(
-  // Round two, first option: if player made first strike
-  states.ROUNDTWO_FIRST_STRIKE,
+var roundTwoModeHandlers = Alexa.CreateStateHandler(
+  // Round two, ask if retaliating
+  states.ROUNDTWO,
   {
   'NewSession': function () {
     this.handler.state = '';
@@ -128,12 +127,22 @@ var roundTwoFirstStrikeModeHandlers = Alexa.CreateStateHandler(
   'AMAZON.HelpIntent': function() {
     var side = this.attributes['side'];
 
-    this.emit(':ask', "FIXME");
+    this.emit(':ask', dialog[side].retaliate);
   },
   'SessionEndedRequest': sessionEndHandler,
+  'AMAZON.YesIntent': function () {
+    this.handler.state = states.ENDGAME;
+    var side = this.attributes['side'];
+    this.emit(':tell', dialog[side].launch_retaliation);
+  },
+  'AMAZON.NoIntent': function () {
+    var side = this.attributes['side'];
+    this.emit(':ask', dialog[side].insist_retaliation,
+      dialog[side].insist_retaliation_2);
+  },
   'Unhandled': function() {
     var side = this.attributes['side'];
 
-    this.emit(':ask', dialog[side].welcome_help);
+    this.emit(':ask', dialog[side].retaliate);
   }
 });

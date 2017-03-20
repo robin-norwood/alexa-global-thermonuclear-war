@@ -19,6 +19,11 @@ exports.dialog = {
       "Authorizing launch of ICBMs and first-strike bombers.",
     'under_attack': "As you wish, comrade. <break time='4s' />. " +
       "Commander! The capitalist pigs have launched a surprise attack!",
+    'retaliate': "Shall we retaliate?",
+    'insist_retaliation': "That is impossible! We can't let the capitalists " +
+      "win!",
+    'insist_retaliation_2': "Comrade, the politburo insists that we launch " +
+      "immediately!",
     'end': "Enough with this capitalist propaganda. How about a nice game of " +
       "chess? Invented in mother Russia, <phoneme alphabet='ipa' ph='dah'>dah" +
       "</phoneme>?"
@@ -26,13 +31,17 @@ exports.dialog = {
   'america': {
     'welcome': "Welcome to NORAD, commander! The president has " +
       "authorized first strike. Would you like to initiate " +
-      "first strike?",
+      "launch?",
     'welcome_help': "We need an answer, commander. Shall we launch first " +
        "strike?",
     'first_strike': "Very well commander. America's nuclear arsenal " +
       "is being deployed. May God help us all.",
     'under_attack': "Yes, sir. <break time='4s' />. Commander! The " +
       "sneaky soviets have launched a suprise attack!",
+    'retaliate': "Commander, we must retaliate! Will you authorize launch?",
+    'insist_retaliation': "Commander, I must insist. The fate of the free " +
+      "world is at stake.",
+    'insist_retaliation_2': "You must authorize a response!",
     'end': "A strange game. The only winning move is not to play."
   }
 };
