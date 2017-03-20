@@ -39,15 +39,6 @@
     {
       "intent": "RussiaIntent",
       "slots": []
-    },
-    {
-      "intent": "TargetCityIntent",
-      "slots": [
-        {
-          "name": "Target",
-          "type": "targetType"
-        }
-      ]
-    },
+    }
   ]
 }

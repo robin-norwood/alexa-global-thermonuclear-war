@@ -12,10 +12,3 @@ RussiaIntent soviet union
 RussiaIntent u. s. s. r.
 RussiaIntent godless commies
 RussiaIntent commies
-TargetCityIntent {Target}
-TargetCityIntent fire at {Target}
-TargetCityIntent launch at {Target}
-TargetCityIntent target {Target}
-DoneTargeting done
-DoneTargeting finished
-DoneTargeting all done
