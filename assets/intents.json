@@ -1,0 +1,53 @@
+{
+  "intents": [
+    {
+      "intent": "AMAZON.YesIntent",
+      "slots": []
+    },
+    {
+      "intent": "AMAZON.NoIntent",
+      "slots": []
+    },
+    {
+      "intent": "AMAZON.HelpIntent",
+      "slots": []
+    },
+    {
+      "intent": "AMAZON.StopIntent",
+      "slots": []
+    },
+    {
+      "intent": "AMAZON.CancelIntent",
+      "slots": []
+    },
+    {
+      "intent": "AMAZON.StartOverIntent",
+      "slots": []
+    },
+    {
+      "intent": "AMAZON.PauseIntent",
+      "slots": []
+    },
+    {
+      "intent": "AMAZON.ResumeIntent",
+      "slots": []
+    },
+    {
+      "intent": "AmericaIntent",
+      "slots": []
+    },
+    {
+      "intent": "RussiaIntent",
+      "slots": []
+    },
+    {
+      "intent": "TargetCityIntent",
+      "slots": [
+        {
+          "name": "Target",
+          "type": "targetType"
+        }
+      ]
+    },
+  ]
+}

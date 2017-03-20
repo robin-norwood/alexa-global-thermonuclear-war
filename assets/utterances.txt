@@ -1,0 +1,21 @@
+AmericaIntent america
+AmericaIntent u. s.
+AmericaIntent u. s. a.
+AmericaIntent u. s. of a.
+AmericaIntent united states
+AmericaIntent united states of america
+AmericaIntent capitalist pigs
+RussiaIntent mother russia
+RussiaIntent russia
+RussiaIntent soviets
+RussiaIntent soviet union
+RussiaIntent u. s. s. r.
+RussiaIntent godless commies
+RussiaIntent commies
+TargetCityIntent {Target}
+TargetCityIntent fire at {Target}
+TargetCityIntent launch at {Target}
+TargetCityIntent target {Target}
+DoneTargeting done
+DoneTargeting finished
+DoneTargeting all done
