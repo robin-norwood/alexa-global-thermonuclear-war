@@ -12,11 +12,13 @@ console.assert(appId, "The environment variable 'ALEXA_APPID' must be set");
 exports.handler = function (event, context, callback) {
   let alexa = Alexa.handler(event, context);
   alexa.appId = appId;
+  alexa.dynamoDBTableName = 'alexaGlobalThermonuclearWarState';
 
   alexa.registerHandlers(newSessionHandlers,
     selectSideModeHandlers,
     roundOneModeHandlers,
-    roundTwoModeHandlers);
+    roundTwoModeHandlers,
+    EndModeHandlers);
 
   alexa.execute();
 };
@@ -89,7 +91,7 @@ let selectSideModeHandlers = Alexa.CreateStateHandler(states.SELECTSIDE, {
     this.emit(':ask', dialog[side].welcome, dialog[side].welcome_help);
   },
   'Unhandled': function () {
-    this.emit(':ask', dialog.common.unhandled);
+    this.emit(':ask', dialog.common.pick_side_prompt);
   }
 });
 
@@ -103,9 +105,11 @@ let roundOneModeHandlers = Alexa.CreateStateHandler(states.ROUNDONE, {
   },
   'SessionEndedRequest': sessionEndHandler,
   'AMAZON.YesIntent': function () {
-    this.handler.state = states.ENDGAME;
+    this.handler.state = states.END;
     let side = this.attributes.side;
-    this.emit(':tell', dialog[side].first_strike);
+    this.emit(':ask', dialog[side].first_strike +
+      dialog[side].counter_attack +
+      dialog.common.end_of_world);
   },
   'AMAZON.NoIntent': function () {
     this.handler.state = states.ROUNDTWO;
@@ -136,7 +140,7 @@ let roundTwoModeHandlers = Alexa.CreateStateHandler(
     this.handler.state = states.ENDGAME;
     let side = this.attributes.side;
     this.emit(':tell', dialog[side].launch_retaliation);
-    this.emit(':tell', dialog.common.end_of_world);
+    this.emit(':ask', dialog.common.end_of_world);
   },
   'AMAZON.NoIntent': function () {
     let side = this.attributes.side;

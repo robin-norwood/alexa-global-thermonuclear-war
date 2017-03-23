@@ -8,17 +8,21 @@ exports.dialog = {
     'pick_side_prompt': "Choose 'America' or 'Russia'.",
     'quit': "Sometimes the only way to win is not to play the game.",
     'unhandled': "Sorry, I'm a bit confused. Try again tomorrow.",
-    'end_of_world': "<break time='2s' />The world has ended in global " +
-      "thermonuclear war. would you like to play again?",
+    'end_of_world': "<break time='2s' />The world has ended in a global " +
+      "thermonuclear war. would you like to play again?"
   },
   'russia': {
-    'welcome': "Greetings, comrade! You are now in command of Aerospace " +
+    'welcome': "Greetings comrade! You are now in command of Aerospace " +
       "Defense Forces. The premier has authorized first strike on your " +
       "command. We shall be launching first strike, <phoneme alphabet='ipa' " +
       "ph='dah'>dah</phoneme>?",
     'welcome_help': "It is a simple 'yes' or 'no' question, comrade.",
-    'first_strike': "Very well, comrade. <break time='2s' />. " +
+    'first_strike': "Very well comrade. <break time='2s' />. " +
       "Authorizing launch of ICBMs and first-strike bombers.",
+    'counter_attack': "<break time='2s' /> Comrade, we are tracking an " +
+      "American counter attack. Defense interceptors launching. " +
+      "<break time='2s' /> Several missiles have broken through our " +
+      "interceptors.",
     'under_attack': "As you wish, comrade. <break time='4s' />. " +
       "Commander! The capitalist pigs have launched a surprise attack!",
     'retaliate': "Shall we retaliate?",
@@ -40,6 +44,10 @@ exports.dialog = {
        "strike?",
     'first_strike': "Very well commander. America's nuclear arsenal " +
       "is being deployed. May God help us all.",
+    'counter_attack': "<break time='2s' /> Commander, we have detected " +
+      "a soviet response inbound. Activating Star Wars defense grid. " +
+      "<break time='2s' /> Multiple contacts have bypassed the defense grid. " +
+      "Looks like this is it, commander.",
     'under_attack': "Yes, sir. <break time='4s' />. Commander! The " +
       "sneaky soviets have launched a suprise attack!",
     'retaliate': "Commander, we must retaliate! Will you authorize launch?",
