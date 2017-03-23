@@ -12,8 +12,8 @@
     "build": "webpack",
     "prezip": "npm run build",
     "zip": "zip -vj alexa-global-thermonuclear-war.zip dist/index.js",
-    "preupload": "npm run zip",
-    "upload": "aws lambda update-function-code --zip-file fileb://alexa-global-thermonuclear-war.zip --function-name alexaGlobalThermonuclearWar"
+    "predeploy": "npm run zip",
+    "deploy": "aws lambda update-function-code --zip-file fileb://alexa-global-thermonuclear-war.zip --function-name alexaGlobalThermonuclearWar"
   },
   "author": "Robin Norwood <robin.norwood@gmail.com>",
   "license": "ISC",
