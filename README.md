@@ -36,3 +36,8 @@ Default output format [None]: json
 ```sh
 npm run deploy
 ```
+
+## TODO
+
+1. Finish basic gameplay
+2. Fix terrible README.md
