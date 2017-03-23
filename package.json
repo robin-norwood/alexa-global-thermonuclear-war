@@ -9,7 +9,11 @@
     "test": "mocha test/ --compilers js:babel-core/register",
     "test:watch": "npm run test -- -w",
     "prebuild": "npm run test",
-    "build": "webpack"
+    "build": "webpack",
+    "prezip": "npm run build",
+    "zip": "zip -vj alexa-global-thermonuclear-war.zip dist/index.js",
+    "preupload": "npm run zip",
+    "upload": "aws lambda update-function-code --zip-file fileb://alexa-global-thermonuclear-war.zip --function-name alexaGlobalThermonuclearWar"
   },
   "author": "Robin Norwood <robin.norwood@gmail.com>",
   "license": "ISC",
