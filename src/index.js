@@ -136,7 +136,7 @@ let roundTwoModeHandlers = Alexa.CreateStateHandler(
     this.handler.state = states.ENDGAME;
     let side = this.attributes.side;
     this.emit(':tell', dialog[side].launch_retaliation);
-
+    this.emit(':tell', dialog.common.end_of_world);
   },
   'AMAZON.NoIntent': function () {
     let side = this.attributes.side;
@@ -166,6 +166,8 @@ let EndModeHandlers = Alexa.CreateStateHandler(
     let side = this.attributes.side;
 
     this.emit(':tell', dialog[side].end);
+    this.attributes.gamesPlayed += 1;
+    this.emit(':saveState', true); // Be sure to call :saveState to persist your session attributes in DynamoDB
   },
   'Unhandled': function () {
     let side = this.attributes.side;

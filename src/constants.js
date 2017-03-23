@@ -7,7 +7,9 @@ exports.dialog = {
       "The Soviet Union?",
     'pick_side_prompt': "Choose 'America' or 'Russia'.",
     'quit': "Sometimes the only way to win is not to play the game.",
-    'unhandled': "Sorry, I'm a bit confused. Try again tomorrow."
+    'unhandled': "Sorry, I'm a bit confused. Try again tomorrow.",
+    'end_of_world': "<break time='2s' />The world has ended in global " +
+      "thermonuclear war. would you like to play again?",
   },
   'russia': {
     'welcome': "Greetings, comrade! You are now in command of Aerospace " +
@@ -24,6 +26,8 @@ exports.dialog = {
       "win!",
     'insist_retaliation_2': "Comrade, the politburo insists that we launch " +
       "immediately!",
+    'launch_retaliation': "Excellent, comrade! Mother Russia may be lost, " +
+      "but at least we took the evil Americans with us!",
     'end': "Enough with this capitalist propaganda. How about a nice game of " +
       "chess? Invented in mother Russia, <phoneme alphabet='ipa' ph='dah'>dah" +
       "</phoneme>?"
@@ -42,6 +46,8 @@ exports.dialog = {
     'insist_retaliation': "Commander, I must insist. The fate of the free " +
       "world is at stake.",
     'insist_retaliation_2': "You must authorize a response!",
+    'launch_retaliation': "Very well. It may be too late to save ourselves, " +
+      "but at least we'll wipe out the commies.",
     'end': "A strange game. The only winning move is not to play."
   }
 };
