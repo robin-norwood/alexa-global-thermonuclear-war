@@ -111,7 +111,7 @@ let roundOneModeHandlers = Alexa.CreateStateHandler(states.ROUNDONE, {
     this.handler.state = states.ROUNDTWO;
     let side = this.attributes.side;
     this.emit(':ask', dialog[side].under_attack +
-      " break time='4s' /> " +
+      " <break time='4s' /> " +
       dialog[side].retaliate);
   },
   'Unhandled': function () {
